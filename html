@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>الأستاذ إسماعيل سليمان | المتجر التعليمي وكتاب المعلم</title>
+  <style>
+    :root {
+      --navy: #0f2342;
+      --navy-dark: #09162b;
+      --gold: #d97706;
+      --gold-light: #fef3c7;
+      --bg: #f8fafc;
+      --card: #ffffff;
+      --text: #1e293b;
+      --muted: #64748b;
+      --border: #e2e8f0;
+      --whatsapp: #16a34a;
+      --whatsapp-dark: #15803d;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, "Segoe UI", Tahoma, Arial, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      padding-bottom: 90px;
+    }
+
+    /* الشريط العلوي */
+    header {
+      background: linear-gradient(135deg, var(--navy-dark), var(--navy));
+      color: #fff;
+      padding: 18px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      box-shadow: 0 4px 16px rgba(9, 22, 43, 0.18);
+    }
+
+    .nav-wrap {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .brand {
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .brand span {
+      color: #fbbf24;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    nav a {
+      color: #e2e8f0;
+      text-decoration: none;
+      font-size: 0.92rem;
+      padding: 6px 12px;
+      border-radius: 8px;
+      transition: background 0.2s;
+    }
+
+    nav a:hover {
+      background: rgba(255, 255, 255, 0.12);
+      color: #fff;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 24px 16px;
+    }
+
+    /* القسم الرئيسي Hero */
+    .hero {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 28px 22px;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+      align-items: center;
+      box-shadow: 0 8px 24px rgba(15, 35, 66, 0.06);
+      margin-bottom: 32px;
+    }
+
+    @media (min-width: 768px) {
+      .hero {
+        grid-template-columns: 240px 1fr;
+        padding: 36px;
+      }
+    }
+
+    .avatar-box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 10px;
+    }
+
+    .avatar-frame {
+      width: 175px;
+      height: 175px;
+      border-radius: 50%;
+      border: 4px solid var(--gold);
+      overflow: hidden;
+      background: #e2e8f0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    }
+
+    .avatar-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .avatar-note {
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background: var(--gold-light);
+      color: #92400e;
+      font-weight: 700;
+      font-size: 0.85rem;
+      padding: 5px 12px;
+      border-radius: 999px;
+      margin-bottom: 10px;
+    }
+
+    .hero h1 {
+      font-size: 1.75rem;
+      color: var(--navy);
+      margin-bottom: 10px;
+      line-height: 1.35;
+    }
+
+    .hero p {
+      color: var(--muted);
+      margin-bottom: 18px;
+      font-size: 1rem;
+    }
+
+    .btn-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 11px 18px;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 0.95rem;
+      text-decoration: none;
+      transition: transform 0.15s, background 0.2s;
+    }
+
+    .btn:active {
+      transform: scale(0.98);
+    }
+
+    .btn-primary {
+      background: var(--navy);
+      color: #fff;
+    }
+
+    .btn-primary:hover {
+      background: var(--navy-dark);
+    }
+
+    .btn-gold {
+      background: var(--gold);
+      color: #fff;
+    }
+
+    .btn-gold:hover {
+      background: #b45309;
+    }
+
+    .btn-wa {
+      background: var(--whatsapp);
+      color: #fff;
+    }
+
+    .btn-wa:hover {
+      background: var(--whatsapp-dark);
+    }
+
+    /* عناوين الأقسام */
+    .section-head {
+      margin-bottom: 18px;
+    }
+
+    .section-head h2 {
+      font-size: 1.45rem;
+      color: var(--navy);
+      margin-bottom: 4px;
+    }
+
+    .section-head p {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    /* قسم الكتاب: وحدة تلو الأخرى */
+    .book-box {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 24px 20px;
+      margin-bottom: 36px;
+      box-shadow: 0 6px 20px rgba(15, 35, 66, 0.05);
+    }
+
+    .book-banner {
+      background: linear-gradient(120deg, var(--navy), #1e3a8a);
+      color: #fff;
+      border-radius: 14px;
+      padding: 20px;
+      margin-bottom: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+    }
+
+    .book-banner h3 {
+      font-size: 1.3rem;
+      margin-bottom: 6px;
+    }
+
+    .book-banner p {
+      color: #e2e8f0;
+      font-size: 0.93rem;
+      max-width: 680px;
+    }
+
+    .tab-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+
+    .tab-btn {
+      padding: 8px 14px;
+      border-radius: 9px;
+      border: 1px solid var(--border);
+      background: #fff;
+      color: var(--text);
+      font-weight: 700;
+      font-size: 0.88rem;
+      cursor: pointer;
+    }
+
+    .tab-btn.active {
+      background: var(--navy);
+      color: #fff;
+      border-color: var(--navy);
+    }
+
+    .stepper-controls {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 14px;
+      background: #f1f5f9;
+      padding: 10px 14px;
+      border-radius: 10px;
+    }
+
+    .step-counter {
+      font-weight: 700;
+      color: var(--navy);
+      font-size: 0.9rem;
+    }
+
+    .unit-card {
+      border: 1px solid #cbd5e1;
+      border-right: 5px solid var(--gold);
+      border-radius: 14px;
+      padding: 20px;
+      background: #fff;
+      margin-bottom: 16px;
+    }
+
+    .unit-tag {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--gold);
+      margin-bottom: 4px;
+      display: block;
+    }
+
+    .unit-title {
+      font-size: 1.15rem;
+      color: var(--navy);
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+
+    .unit-desc {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-bottom: 14px;
+    }
+
+    .units-list {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    @media (min-width: 640px) {
+      .units-list {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .unit-mini {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 12px 14px;
+      background: #f8fafc;
+      cursor: pointer;
+      text-align: right;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      transition: border-color 0.2s, background 0.2s;
+    }
+
+    .unit-mini:hover,
+    .unit-mini.selected {
+      border-color: var(--navy);
+      background: #eff6ff;
+    }
+
+    .unit-num {
+      background: var(--navy);
+      color: #fff;
+      font-weight: 700;
+      font-size: 0.8rem;
+      min-width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 2px;
+    }
+
+    /* المتجر التعليمي */
+    .filter-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 20px;
+    }
+
+    .filter-btn {
+      padding: 8px 16px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: #fff;
+      color: var(--text);
+      font-weight: 700;
+      font-size: 0.88rem;
+      cursor: pointer;
+    }
+
+    .filter-btn.active {
+      background: var(--gold);
+      color: #fff;
+      border-color: var(--gold);
+    }
+
+    .products-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 18px;
+      margin-bottom: 36px;
+    }
+
+    @media (min-width: 640px) {
+      .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 960px) {
+      .products-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .product-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 14px;
+      box-shadow: 0 4px 14px rgba(15, 35, 66, 0.04);
+    }
+
+    .cat-pill {
+      display: inline-block;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: #e0f2fe;
+      color: #0369a1;
+      margin-bottom: 8px;
+    }
+
+    .product-card h3 {
+      font-size: 1.08rem;
+      color: var(--navy);
+      margin-bottom: 6px;
+    }
+
+    .product-card p {
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .product-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      padding-top: 12px;
+      border-top: 1px solid var(--border);
+    }
+
+    .price {
+      font-weight: 800;
+      color: var(--navy);
+      font-size: 1rem;
+    }
+
+    /* نموذج الطلب السريع */
+    .order-box {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 24px 20px;
+      box-shadow: 0 6px 20px rgba(15, 35, 66, 0.05);
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+      margin-top: 14px;
+    }
+
+    @media (min-width: 640px) {
+      .form-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .field {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .field label {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--navy);
+    }
+
+    .field input,
+    .field select {
+      padding: 11px 12px;
+      border: 1px solid #cbd5e1;
+      border-radius: 10px;
+      font-size: 0.95rem;
+      font-family: inherit;
+      background: #fff;
+    }
+
+    .field input:focus,
+    .field select:focus {
+      outline: none;
+      border-color: var(--navy);
+    }
+
+    /* زر واتساب عائم */
+    .float-wa {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      background: var(--whatsapp);
+      color: #fff;
+      padding: 12px 18px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 800;
+      font-size: 0.92rem;
+      box-shadow: 0 8px 22px rgba(22, 163, 74, 0.35);
+      z-index: 60;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.85rem;
+      padding: 28px 16px 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="nav-wrap">
+      <a href="#" class="brand">الأستاذ <span>إسماعيل سليمان</span></a>
+      <nav>
+        <a href="#book-section">كتاب المعلم</a>
+        <a href="#store-section">المتجر التعليمي</a>
+        <a href="#order-section">اطلب الآن</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- القسم التعريفي والصورة الشخصية -->
+    <section class="hero">
+      <div class="avatar-box">
+        <div class="avatar-frame">
+          <!-- استبدل رابط الصورة أدناه برابط أو مسار صورتك الشخصية -->
+          <img
+            id="teacherPhoto"
+            src="https://via.placeholder.com/300x300/0f2342/ffffff?text=%D8%A3.+%D8%A5%D8%B3%D9%85%D8%A7%D8%B9%D9%8A%D9%84+%D8%B3%D9%84%D9%8A%D9%85%D8%A7%D9%86"
+            alt="الأستاذ إسماعيل سليمان"
+          />
+        </div>
+        <span class="avatar-note">الأستاذ إسماعيل سليمان</span>
+      </div>
+
+      <div>
+        <span class="hero-badge">منصة تعليمية وتربوية متكاملة</span>
+        <h1>الأستاذ إسماعيل سليمان — كتب، مذكرات، امتحانات، وملخصات</h1>
+        <p>
+          نقدم محتوى تعليمياً وتربوياً منظماً يجمع بين بناء شخصية الطالب وتيسير الفهم والمراجعة،
+          إلى جانب إصدارنا التربوي المميز <strong>«المعلم... رحلة بناء الإنسان»</strong> مع إمكانية
+          الطلب المباشر عبر واتساب.
+        </p>
+        <div class="btn-row">
+          <a href="#book-section" class="btn btn-gold">استعراض كتاب المعلم (وحدة تلو الأخرى)</a>
+          <a href="#store-section" class="btn btn-primary">تصفح المتجر التعليمي</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- قسم الكتاب: وحدة تلو الأخرى -->
+    <section id="book-section" class="book-box">
+      <div class="book-banner">
+        <div>
+          <h3>كتاب: المعلم... رحلة بناء الإنسان</h3>
+          <p>
+            استعرض محاور ووحدات الكتاب خطوة بخطوة وحدة تلو الأخرى، سواء عبر العناوين التمهيدية
+            المقترحة أو عبر وحدات الفهرس المرقمة.
+          </p>
+        </div>
+        <button type="button" class="btn btn-wa" onclick="quickOrder('كتاب: المعلم... رحلة بناء الإنسان')">
+          طلب نسخة الكتاب عبر واتساب
+        </button>
+      </div>
+
+      <div class="tab-bar">
+        <button type="button" class="tab-btn active" id="tabProposed" onclick="switchBookMode('proposed')">
+          العناوين المقترحة للوحدات الثلاث
+        </button>
+        <button type="button" class="tab-btn" id="tabOriginal" onclick="switchBookMode('original')">
+          وحدات فهرس النسخة الأصلية (17 وحدة)
+        </button>
+      </div>
+
+      <div class="stepper-controls">
+        <button type="button" class="btn btn-primary" onclick="prevUnit()">← الوحدة السابقة</button>
+        <span class="step-counter" id="stepCounter">الوحدة 1 من 3</span>
+        <button type="button" class="btn btn-primary" onclick="nextUnit()">الوحدة التالية →</button>
+      </div>
+
+      <!-- البطاقة النشطة للوحدة الحالية -->
+      <div class="unit-card" id="activeUnitCard">
+        <span class="unit-tag" id="activeUnitTag">عنوان مقترح — وحدة 1</span>
+        <div class="unit-title" id="activeUnitTitle">المعلم... رسالة قبل أن يكون مهنة.</div>
+        <p class="unit-desc" id="activeUnitDesc">
+          تأصيل الرسالة التربوية للمعلم بوصفها أمانة وصناعة أثر تتجاوز حدود التلقين اليومي.
+        </p>
+        <button type="button" class="btn btn-gold" id="askUnitBtn">
+          استفسر أو اطلب حول هذه الوحدة عبر واتساب
+        </button>
+      </div>
+
+      <!-- قائمة جميع وحدات الوضع الحالي للانتقال السريع -->
+      <div class="units-list" id="unitsListContainer"></div>
+    </section>
+
+    <!-- المتجر التعليمي -->
+    <section id="store-section">
+      <div class="section-head">
+        <h2>المتجر التعليمي</h2>
+        <p>اختر التصنيف المناسب واطلب نسختك مباشرة عبر واتساب</p>
+      </div>
+
+      <div class="filter-bar">
+        <button type="button" class="filter-btn active" onclick="filterProducts('الكل', this)">الكل</button>
+        <button type="button" class="filter-btn" onclick="filterProducts('الكتب', this)">الكتب</button>
+        <button type="button" class="filter-btn" onclick="filterProducts('المذكرات', this)">المذكرات</button>
+        <button type="button" class="filter-btn" onclick="filterProducts('الامتحانات', this)">الامتحانات</button>
+        <button type="button" class="filter-btn" onclick="filterProducts('الملخصات', this)">الملخصات</button>
+      </div>
+
+      <div class="products-grid" id="productsGrid"></div>
+    </section>
+
+    <!-- نموذج الطلب المباشر عبر واتساب -->
+    <section id="order-section" class="order-box">
+      <div class="section-head">
+        <h2>إرسال طلب مباشر عبر واتساب</h2>
+        <p>سيتم تجهيز رسالتك وتحويلك مباشرة إلى الرقم <strong>249126474947</strong></p>
+      </div>
+
+      <form id="whatsappOrderForm" class="form-grid" onsubmit="submitOrderForm(event)">
+        <div class="field">
+          <label for="customerName">الاسم الكامل</label>
+          <input type="text" id="customerName" required placeholder="اكتب اسمك هنا" />
+        </div>
+
+        <div class="field">
+          <label for="customerPhone">رقم هاتفك</label>
+          <input type="tel" id="customerPhone" required placeholder="مثال: 2499xxxxxxxx" />
+        </div>
+
+        <div class="field">
+          <label for="productSelect">الكتاب أو المنتج المطلوب</label>
+          <select id="productSelect">
+            <option value="كتاب: المعلم... رحلة بناء الإنسان">كتاب: المعلم... رحلة بناء الإنسان</option>
+            <option value="مذكرات المراحل الدراسية (أساس / متوسط / ثانوي)">مذكرات المراحل الدراسية (أساس / متوسط / ثانوي)</option>
+            <option value="بنك الامتحانات والنماذج التدريبية">بنك الامتحانات والنماذج التدريبية</option>
+            <option value="ملخصات شاملة للمراجعة السريعة">ملخصات شاملة للمراجعة السريعة</option>
+            <option value="حقيبة المعلم التربوية والمهارات الصفية">حقيبة المعلم التربوية والمهارات الصفية</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="quantityInput">الكمية / عدد النسخ</label>
+          <input type="number" id="quantityInput" min="1" value="1" required />
+        </div>
+
+        <div class="field" style="grid-column: 1 / -1;">
+          <label for="notesInput">ملاحظات إضافية أو المدينة (اختياري)</label>
+          <input type="text" id="notesInput" placeholder="مثال: كنانة / ولاية النيل الأبيض - استفسار عن وحدة محددة" />
+        </div>
+
+        <div style="grid-column: 1 / -1; margin-top: 6px;">
+          <button type="submit" class="btn btn-wa">إرسال الطلب عبر واتساب الآن</button>
+        </div>
+      </form>
+    </section>
+
+  </main>
+
+  <a
+    id="floatingWaLink"
+    class="float-wa"
+    href="https://wa.me/249126474947"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    واتساب: 249126474947
+  </a>
+
+  <footer>
+    جميع الحقوق محفوظة — منصة الأستاذ إسماعيل سليمان التعليمية والتربوية
+  </footer>
+
+  <script>
+    const WHATSAPP_NUMBER = "249126474947";
+
+    // عناوين الوحدات المقترحة الثلاث
+    const proposedUnits = [
+      {
+        num: "1",
+        tag: "عنوان مقترح — الوحدة 1",
+        title: "المعلم... رسالة قبل أن يكون مهنة.",
+        desc: "تأصيل المعنى التربوي والرسالي لمهنة التعليم وبناء الإنسان بوعي ومسؤولية."
+      },
+      {
+        num: "2",
+        tag: "عنوان مقترح — الوحدة 2",
+        title: "المعلم الذي يدخل إلى قلب الطالب قبل أن يدخل إلى عقله.",
+        desc: "بناء الجسور النفسية والوجدانية التي تفتح أبواب الفهم والثقة والتلقي الإيجابي."
+      },
+      {
+        num: "3",
+        tag: "عنوان مقترح — الوحدة 3",
+        title: "الكلمة الطيبة تصنع إنسانًا.",
+        desc: "أثر التشجيع والكلمة البنّاءة في تشكيل ذات الطالب وتحفيزه نحو التقدم."
+      }
+    ];
+
+    // عناوين الوحدات الموجودة في فهرس النسخة الأصلية
+    const originalUnits = [
+      { num: "2", title: "المعلم والطالب: علاقة قبل أن تكون عملية تعليمية" },
+      { num: "3", title: "المعلم وفن اكتشاف الطالب" },
+      { num: "13", title: "المعلم وفن بناء الشخصية والقدوة" },
+      { num: "14", title: "المعلم وفن التواصل مع أولياء الأمور" },
+      { num: "15", title: "المعلم وفن التخطيط للدرس" },
+      { num: "16", title: "المعلم وفن تحفيز الطالب وبناء الدافعية" },
+      { num: "17", title: "المعلم وفن إدارة الصف وبناء الانضباط الإيجابي" },
+      { num: "20", title: "المعلم وفن القراءة والتعلم المستمر" },
+      { num: "21", title: "المعلم وفن التواصل مع أولياء الأمور وبناء الشراكة التربوية" },
+      { num: "22", title: "المعلم وفن التقويم والاختبارات" },
+      { num: "23", title: "المعلم وفن التعامل مع الفروق الفردية بين الطلاب" },
+      { num: "24", title: "المعلم وفن بناء شخصية الطالب والقيم التربوية" },
+      { num: "25", title: "المعلم وفن القيادة التربوية وصناعة الأثر" },
+      { num: "26", title: "المعلم وفن إدارة الأزمات والضغوط والمواقف الطارئة" },
+      { num: "27", title: "المعلم وفن إدارة الوقت وتنظيم العمل وتحقيق التوازن" },
+      { num: "28", title: "المعلم وفن توظيف التكنولوجيا والذكاء الاصطناعي في التعليم" },
+      { num: "29", title: "المعلم وبناء بيئة صفية إيجابية ومحفزة" }
+    ];
+
+    // منتجات المتجر التعليمي
+    const products = [
+      {
+        id: 1,
+        category: "الكتب",
+        title: "كتاب: المعلم... رحلة بناء الإنسان",
+        desc: "إصدار تربوي متكامل يستعرض أبعاد الرسالة التعليمية وبناء الشخصية والمهارات الصفية والتربوية.",
+        price: "متاح للطلب"
+      },
+      {
+        id: 2,
+        category: "المذكرات",
+        title: "مذكرات منظمة للمواد الدراسية",
+        desc: "شرح مبسط وأمثلة تطبيقية وأسئلة تدريبية تساعد الطلاب على الفهم السريع والمذاكرة المنظمة.",
+        price: "متاح للطلب"
+      },
+      {
+        id: 3,
+        category: "الامتحانات",
+        title: "نماذج امتحانات واختبارات تقويمية",
+        desc: "اختبارات تدريبية متنوعة لقياس مستوى الاستيعاب وتدريب الطلاب على أنماط الأسئلة والزمن.",
+        price: "متاح للطلب"
+      },
+      {
+        id: 4,
+        category: "الملخصات",
+        title: "ملخصات مركزة للمراجعة النهائية",
+        desc: "خلاصات واضحة ونقاط مركزة تسهل استرجاع الأفكار الأساسية قبل الاختبارات والمراجعات.",
+        price: "متاح للطلب"
+      },
+      {
+        id: 5,
+        category: "الكتب",
+        title: "دليل المهارات الصفية والقيادة التربوية",
+        desc: "محاور عملية حول التخطيط للدرس، إدارة الصف، الانضباط الإيجابي، وتوظيف التقنية والذكاء الاصطناعي.",
+        price: "متاح للطلب"
+      },
+      {
+        id: 6,
+        category: "الملخصات",
+        title: "بطاقات وأفكار تربوية وتوجيهية",
+        desc: "مضامين قصيرة وملهمة للطلاب والمعلمين لدعم الدافعية والقيم التربوية في البيئة المدرسية.",
+        price: "متاح للطلب"
+      }
+    ];
+
+    let currentBookMode = "proposed";
+    let currentUnitIndex = 0;
+
+    function getActiveArray() {
+      return currentBookMode === "proposed" ? proposedUnits : originalUnits;
+    }
+
+    function switchBookMode(mode) {
+      currentBookMode = mode;
+      currentUnitIndex = 0;
+
+      document.getElementById("tabProposed").classList.toggle("active", mode === "proposed");
+      document.getElementById("tabOriginal").classList.toggle("active", mode === "original");
+
+      renderBookStepper();
+    }
+
+    function renderBookStepper() {
+      const list = getActiveArray();
+      const unit = list[currentUnitIndex];
+
+      document.getElementById("stepCounter").textContent =
+        `الوحدة ${currentUnitIndex + 1} من ${list.length}`;
+
+      if (currentBookMode === "proposed") {
+        document.getElementById("activeUnitTag").textContent = unit.tag;
+        document.getElementById("activeUnitTitle").textContent = unit.title;
+        document.getElementById("activeUnitDesc").textContent = unit.desc;
+      } else {
+        document.getElementById("activeUnitTag").textContent = `فهرس النسخة الأصلية — وحدة رقم ${unit.num}`;
+        document.getElementById("activeUnitTitle").textContent = unit.title;
+        document.getElementById("activeUnitDesc").textContent =
+          `ضمن فهرس كتاب «المعلم... رحلة بناء الإنسان» (الوحدة رقم ${unit.num}).`;
+      }
+
+      const askBtn = document.getElementById("askUnitBtn");
+      askBtn.onclick = () => {
+        quickOrder(`كتاب المعلم - وحدة (${unit.num}): ${unit.title}`);
+      };
+
+      const listContainer = document.getElementById("unitsListContainer");
+      listContainer.innerHTML = "";
+
+      list.forEach((item, idx) => {
+        const btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "unit-mini" + (idx === currentUnitIndex ? " selected" : "");
+        btn.innerHTML = `
+          <span class="unit-num">${item.num}</span>
+          <span><strong>${item.title}</strong></span>
+        `;
+        btn.onclick = () => {
+          currentUnitIndex = idx;
+          renderBookStepper();
+        };
+        listContainer.appendChild(btn);
+      });
+    }
+
+    function prevUnit() {
+      const list = getActiveArray();
+      currentUnitIndex = (currentUnitIndex - 1 + list.length) % list.length;
+      renderBookStepper();
+    }
+
+    function nextUnit() {
+      const list = getActiveArray();
+      currentUnitIndex = (currentUnitIndex + 1) % list.length;
+      renderBookStepper();
+    }
+
+    function renderProducts(category = "الكل") {
+      const grid = document.getElementById("productsGrid");
+      grid.innerHTML = "";
+
+      const filtered =
+        category === "الكل"
+          ? products
+          : products.filter((p) => p.category === category);
+
+      filtered.forEach((item) => {
+        const card = document.createElement("article");
+        card.className = "product-card";
+        card.innerHTML = `
+          <div>
+            <span class="cat-pill">${item.category}</span>
+            <h3>${item.title}</h3>
+            <p>${item.desc}</p>
+          </div>
+          <div class="product-footer">
+            <span class="price">${item.price}</span>
+            <button type="button" class="btn btn-wa" onclick="quickOrder('${item.title.replace(/'/g, "\\'")}')">
+              اطلب عبر واتساب
+            </button>
+          </div>
+        `;
+        grid.appendChild(card);
+      });
+    }
+
+    function filterProducts(category, btnEl) {
+      document.querySelectorAll(".filter-btn").forEach((b) => b.classList.remove("active"));
+      if (btnEl) btnEl.classList.add("active");
+      renderProducts(category);
+    }
+
+    function buildWhatsAppUrl(text) {
+      return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
+    }
+
+    function quickOrder(itemName) {
+      const msg = `السلام عليكم أستاذ إسماعيل سليمان، أرغب في الاستفسار / الطلب بخصوص:\n${itemName}`;
+      window.open(buildWhatsAppUrl(msg), "_blank", "noopener,noreferrer");
+    }
+
+    function submitOrderForm(e) {
+      e.preventDefault();
+      const name = document.getElementById("customerName").value.trim();
+      const phone = document.getElementById("customerPhone").value.trim();
+      const product = document.getElementById("productSelect").value;
+      const qty = document.getElementById("quantityInput").value;
+      const notes = document.getElementById("notesInput").value.trim();
+
+      let message =
+        `السلام عليكم أستاذ إسماعيل سليمان، طلب جديد من المتجر التعليمي:\n` +
+        `• الاسم: ${name}\n` +
+        `• رقم الهاتف: ${phone}\n` +
+        `• المطلوب: ${product}\n` +
+        `• الكمية: ${qty}`;
+
+      if (notes) {
+        message += `\n• ملاحظات / المدينة: ${notes}`;
+      }
+
+      window.open(buildWhatsAppUrl(message), "_blank", "noopener,noreferrer");
+    }
+
+    // تشغيل العرض الأولي
+    renderBookStepper();
+    renderProducts("الكل");
+  </script>
+</body>
+</html>
